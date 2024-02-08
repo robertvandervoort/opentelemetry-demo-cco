@@ -1,6 +1,6 @@
-# OpenTelemetry Demo Helm Chart
+# OpenTelemetry Demo Helm Chart - for use with Cisco Cloud Observability
 
-The helm chart installs [OpenTelemetry Demo](https://github.com/open-telemetry/opentelemetry-demo)
+The helm chart installs a modified / stripped down version of [OpenTelemetry Demo](https://github.com/open-telemetry/opentelemetry-demo)
 in kubernetes cluster.
 
 ## Prerequisites

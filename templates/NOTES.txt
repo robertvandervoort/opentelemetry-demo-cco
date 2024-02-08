@@ -11,11 +11,14 @@
 
 - All services are available via the Frontend proxy: http://localhost:8080
   by running these commands:
-     kubectl --namespace {{ .Release.Namespace }} port-forward svc/{{ include "otel-demo.name" . }}-frontendproxy 8080:8080
+
+  If accessing locally:
+    kubectl --namespace {{ .Release.Namespace }} port-forward svc/{{ include "otel-demo.name" . }}-frontendproxy 8080:8080
+  If accessing remotely (replace 0.0.0.0 with the ip of a specific adapter if you dont want it to listen on all):
+    kubectl --namespace  {{ .Release.Namespace }} port-forward svc/{{ include "otel-demo.name" . }}-frontendproxy --address=0.0.0.0 8080:8080
 
   The following services are available at these paths once the proxy is exposed:
-  Webstore             http://localhost:8080/
-  Grafana              http://localhost:8080/grafana/
-  Feature Flags UI     http://localhost:8080/feature/
-  Load Generator UI    http://localhost:8080/loadgen/
-  Jaeger UI            http://localhost:8080/jaeger/ui/
+  Webstore                          http://localhost:8080/
+  Grafana (if you enabled it)       http://localhost:8080/grafana/
+  Feature Flags UI                  http://localhost:8080/feature/
+  Load Generator UI                 http://localhost:8080/loadgen/
