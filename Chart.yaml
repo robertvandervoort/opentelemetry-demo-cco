@@ -1,0 +1,22 @@
+apiVersion: v2
+appVersion: 1.7.0
+dependencies:
+- condition: opentelemetry-collector.enabled
+  name: opentelemetry-collector
+  repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+  version: 0.77.0
+- condition: grafana.enabled
+  name: grafana
+  repository: https://grafana.github.io/helm-charts
+  version: 7.3.0
+description: opentelemetry demo helm chart for use with Cisco Cloud Observability OTEL collector
+home: https://opentelemetry.io/
+icon: https://opentelemetry.io/img/logos/opentelemetry-logo-nav.png
+maintainers:
+- name: robertvandervoort
+name: opentelemetry-demo-cco
+sources:
+- https://github.com/robertvandervoort/opentelemetry-helm-charts/tree/main/charts/opentelemetry-demo-cco
+- https://docs.appdynamics.com/observability/cisco-cloud-observability/en/kubernetes-and-app-service-monitoring/install-kubernetes-and-app-service-monitoring#InstallKubernetesandAppServiceMonitoring-helm-chartsInstallKubernetesandAppServiceMonitoringUsingHelmCharts
+type: application
+version: 0.27.3
