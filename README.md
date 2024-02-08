@@ -12,7 +12,7 @@ in kubernetes cluster.
 
 Add OpenTelemetry Helm repository:
 
-Pull this repository then run the following. Replace <namespace> and <release>. I used rvander-oteldemo for both to make it easy to find.
+Pull this repository then run the following. Replace \<namespace> and \<release>. I used rvander-oteldemo for both to make it easy to find.
 ```console
 helm package opentelemetry-demo-cco
 helm install -n<namespace> <release> opentelemetry-demo-cco-0.27.3.tgz
