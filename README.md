@@ -18,10 +18,6 @@ helm package opentelemetry-demo-cco
 helm install -n<namespace> <release> opentelemetry-demo-cco-0.27.3.tgz
 ```
 
-## Upgrading
-
-See [UPGRADING.md](UPGRADING.md).
-
 ## OpenShift
 
 Installing the chart on OpenShift requires the following additional steps:
